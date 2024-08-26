@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A35AA01-A75C-482F-AFE5-DDA8A79AE111}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ThaiEndingConsonants</RootNamespace>
+    <AssemblyName>ThaiEndingConsonants</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>writing.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itext.barcodes, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-connector, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.commons.8.0.5\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfua, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.pdfua.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.4.7.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.2.2.1\lib\net472\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Asio.2.2.1\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.2.1\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Midi.2.2.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Wasapi.2.2.1\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinForms.2.2.1\lib\net472\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinMM.2.2.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="game.Designer.cs">
+      <DependentUpon>game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelClass.cs" />
+    <Compile Include="objectiveProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="objectiveProgram.Designer.cs">
+      <DependentUpon>objectiveProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="practice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="practice.Designer.cs">
+      <DependentUpon>practice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purpose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purpose.Designer.cs">
+      <DependentUpon>purpose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selectPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectPage.Designer.cs">
+      <DependentUpon>selectPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="game.resx">
+      <DependentUpon>game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="objectiveProgram.resx">
+      <DependentUpon>objectiveProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="practice.resx">
+      <DependentUpon>practice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purpose.resx">
+      <DependentUpon>purpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selectPage.resx">
+      <DependentUpon>selectPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Resources\play-button.png" />
+    <Content Include="Audio\2.mp3" />
+    <Content Include="Audio\1.mp3" />
+    <Content Include="Audio\3.mp3" />
+    <Content Include="Audio\4-1.mp3" />
+    <Content Include="Audio\4-2.mp3" />
+    <Content Include="Audio\4-3.mp3" />
+    <Content Include="Audio\4-4.mp3" />
+    <Content Include="Audio\4-5.mp3" />
+    <Content Include="Audio\4-6.mp3" />
+    <Content Include="Audio\4-7.mp3" />
+    <Content Include="Audio\4.mp3" />
+    <Content Include="Audio\5.mp3" />
+    <Content Include="Audio\6.mp3" />
+    <Content Include="Audio\กา.mp3" />
+    <Content Include="Audio\คำอธิบายโปรแกรมการสอนมาตราตัวสะกด.mp3" />
+    <Content Include="Audio\งู.mp3" />
+    <Content Include="Audio\ปลา.mp3" />
+    <Content Include="Audio\มือ.mp3" />
+    <Content Include="Audio\วัตถุประสงค์ของโปรแกรม.mp3" />
+    <Content Include="Audio\วัว.mp3" />
+    <Content Include="Audio\หมู.mp3" />
+    <Content Include="Audio\เกมจับคู่รูปภาพและคำ.mp3" />
+    <Content Include="Audio\เนื้อหา.mp3" />
+    <Content Include="Audio\แบบฝึกหัด.mp3" />
+    <Content Include="Audio\แม่กก\ตัวอย่างคำแม่กก.mp3" />
+    <Content Include="Audio\แม่กก\นก.mp3" />
+    <Content Include="Audio\แม่กก\ปีก.mp3" />
+    <Content Include="Audio\แม่กก\พริก.mp3" />
+    <Content Include="Audio\แม่กก\สุนัข.mp3" />
+    <Content Include="Audio\แม่กก\หมวก.mp3" />
+    <Content Include="Audio\แม่กก\เด็ก.mp3" />
+    <Content Include="Audio\แม่กก\แม่กก.mp3" />
+    <Content Include="Audio\แม่กง\กวาง.mp3" />
+    <Content Include="Audio\แม่กง\กางเกง.mp3" />
+    <Content Include="Audio\แม่กง\ตัวอย่างคำในแม่กง.mp3" />
+    <Content Include="Audio\แม่กง\รองเท้า.mp3" />
+    <Content Include="Audio\แม่กง\ลิง.mp3" />
+    <Content Include="Audio\แม่กง\สอง.mp3" />
+    <Content Include="Audio\แม่กง\สีม่วง.mp3" />
+    <Content Include="Audio\แม่กง\แม่กงใช้งสะกด.mp3" />
+    <Content Include="Audio\แม่กด\กระโดด.mp3" />
+    <Content Include="Audio\แม่กด\ชายหาด.mp3" />
+    <Content Include="Audio\แม่กด\ตัวอย่างคำแม่กด.mp3" />
+    <Content Include="Audio\แม่กด\ตำรวจ.mp3" />
+    <Content Include="Audio\แม่กด\อูฐ.mp3" />
+    <Content Include="Audio\แม่กด\เพชร.mp3" />
+    <Content Include="Audio\แม่กด\แม่กด.mp3" />
+    <Content Include="Audio\แม่กด\โทรทัศน์.mp3" />
+    <Content Include="Audio\แม่กน\จาน.mp3" />
+    <Content Include="Audio\แม่กน\ตัวอย่างคำแม่กน.mp3" />
+    <Content Include="Audio\แม่กน\ถนน.mp3" />
+    <Content Include="Audio\แม่กน\ปฏิทิน.mp3" />
+    <Content Include="Audio\แม่กน\พยาบาล.mp3" />
+    <Content Include="Audio\แม่กน\วาฬ.mp3" />
+    <Content Include="Audio\แม่กน\เหรียญ.mp3" />
+    <Content Include="Audio\แม่กน\แม่กน.mp3" />
+    <Content Include="Audio\แม่กบ\กบ.mp3" />
+    <Content Include="Audio\แม่กบ\ตะเกียบ.mp3" />
+    <Content Include="Audio\แม่กบ\ตัวอย่างคำแม่กบ.mp3" />
+    <Content Include="Audio\แม่กบ\ยีราฟ.mp3" />
+    <Content Include="Audio\แม่กบ\รูป.mp3" />
+    <Content Include="Audio\แม่กบ\แม่กบ.mp3" />
+    <Content Include="Audio\แม่กบ\โทรศัพท์.mp3" />
+    <Content Include="Audio\แม่กบ\ไมโครเวฟ.mp3" />
+    <Content Include="Audio\แม่กม\กลม.mp3" />
+    <Content Include="Audio\แม่กม\ตัวอย่างคำในแม่กม.mp3" />
+    <Content Include="Audio\แม่กม\นม.mp3" />
+    <Content Include="Audio\แม่กม\พัดลม.mp3" />
+    <Content Include="Audio\แม่กม\มะขาม.mp3" />
+    <Content Include="Audio\แม่กม\ส้ม.mp3" />
+    <Content Include="Audio\แม่กม\ส้อม.mp3" />
+    <Content Include="Audio\แม่กม\แม่กมใช้มสะกด.mp3" />
+    <Content Include="Audio\แม่เกย\กระต่าย.mp3" />
+    <Content Include="Audio\แม่เกย\กล้วย.mp3" />
+    <Content Include="Audio\แม่เกย\ด้าย.mp3" />
+    <Content Include="Audio\แม่เกย\ตัวอย่างคำในแม่เกย.mp3" />
+    <Content Include="Audio\แม่เกย\ผู้ชาย.mp3" />
+    <Content Include="Audio\แม่เกย\ยาย.mp3" />
+    <Content Include="Audio\แม่เกย\สร้อย.mp3" />
+    <Content Include="Audio\แม่เกย\แม่เกยใช้ยสะกด.mp3" />
+    <Content Include="Audio\แม่เกอว\ดาว.mp3" />
+    <Content Include="Audio\แม่เกอว\ตัวอย่างคำในแม่เกอว.mp3" />
+    <Content Include="Audio\แม่เกอว\นิ้ว.mp3" />
+    <Content Include="Audio\แม่เกอว\ว่าว.mp3" />
+    <Content Include="Audio\แม่เกอว\สีเขียว.mp3" />
+    <Content Include="Audio\แม่เกอว\แก้ว.mp3" />
+    <Content Include="Audio\แม่เกอว\แมว.mp3" />
+    <Content Include="Audio\แม่เกอว\แม่เกอวใช้วสะกด.mp3" />
+    <Content Include="Resources\1-2.png" />
+    <None Include="Resources\dolphin-3321762_1280.png" />
+    <None Include="Resources\crow-5756600_1280.png" />
+    <None Include="Resources\animals-1295060_1280.png" />
+    <None Include="Resources\cow-159731_1280.png" />
+    <None Include="Resources\ai-generated-8670831_1280.png" />
+    <None Include="Resources\bowl-2029454_1280.png" />
+    <None Include="Resources\coins-42776_1280.png" />
+    <None Include="Resources\calendar-159098_1280.png" />
+    <None Include="Resources\cars-5970663_1280.png" />
+    <None Include="Resources\diamond-158431_1280.png" />
+    <None Include="Resources\camel-7746330_1280.png" />
+    <None Include="Resources\comic-characters-2024758_1280.png" />
+    <None Include="Resources\cartoon-2027156_1280.png" />
+    <None Include="Resources\dog-8585844_1280.png" />
+    <None Include="Resources\cap-304059_1280.png" />
+    <None Include="Resources\asian-1294104_1280.png" />
+    <None Include="Resources\dragon-986389_1280.png" />
+    <None Include="Resources\cartoon-2029827_1280.png" />
+    <None Include="Resources\alien-2029727_1280.png" />
+    <None Include="Resources\bananas-311788_1280.png" />
+    <None Include="Resources\buttons-154563_1280.png" />
+    <None Include="Resources\deer-48419_1280.png" />
+    <None Include="Resources\boy-1299263_1280.png" />
+    <None Include="Resources\clothes-1294974_1280.png" />
+    <None Include="Resources\animal-6895748_1280.png" />
+    <None Include="Resources\ai-generated-8670831_12801.png" />
+    <None Include="Resources\8318334.jpg" />
+    <None Include="Resources\83183341.jpg" />
+    <None Include="Resources\download.gif" />
+    <None Include="Resources\download1.gif" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\download_9502265.png" />
+    <None Include="Resources\download_95022651.png" />
+    <Content Include="Resources\eggplant-2924511_1280.png" />
+    <None Include="Resources\eggplant-2924511_12801.png" />
+    <None Include="Resources\hand-8238233_1280.png" />
+    <None Include="Resources\giraffe-40035_1280.png" />
+    <None Include="Resources\microwave-29056_1280.png" />
+    <None Include="Resources\frog-2644410_1280.png" />
+    <None Include="Resources\man-1954300_1280.png" />
+    <None Include="Resources\icons-1293736_1280.png" />
+    <None Include="Resources\kitties-304268_1280.png" />
+    <None Include="Resources\men-2687628_1280.png" />
+    <None Include="Resources\man-1989145_1280.png" />
+    <None Include="Resources\milk-576439_1280.png" />
+    <None Include="Resources\fan-154868_1280.png" />
+    <None Include="Resources\fork-149488_1280.png" />
+    <Content Include="Resources\monkey-309461_1280.png" />
+    <None Include="Resources\monkey-309461_12801.png" />
+    <None Include="Resources\pp-1.pdf" />
+    <None Include="Resources\pp-2.pdf" />
+    <None Include="Resources\pp-3.pdf" />
+    <None Include="Resources\telephone-388838_1280.png" />
+    <None Include="Resources\polaroid-2315182_1280.png" />
+    <None Include="Resources\whale-36828_1280.png" />
+    <None Include="Resources\plate-159469_1280.png" />
+    <None Include="Resources\tv-310801_1280.png" />
+    <None Include="Resources\sand-305497_1280.png" />
+    <None Include="Resources\wings-3335888_1280.png" />
+    <None Include="Resources\wren-7747032_1280.png" />
+    <None Include="Resources\red-peppers-296655_1280.png" />
+    <None Include="Resources\orange-juice-6927663_1280.png" />
+    <None Include="Resources\rabbit-3550456_1280.png" />
+    <None Include="Resources\string-152761_1280.png" />
+    <None Include="Resources\pearls-1084303_1280.png" />
+    <None Include="Resources\tamarind-154393_1280.png" />
+    <None Include="Resources\orange-42394_1280.png" />
+    <None Include="Resources\shoes-6329388_1280.png" />
+    <None Include="Resources\Untitled design.gif" />
+    <None Include="Resources\Untitled design.png" />
+    <None Include="Resources\Untitled design1.png" />
+    <None Include="Resources\Untitled design2.png" />
+    <None Include="Resources\printer_2383598.png" />
+    <None Include="Resources\p-3.PNG" />
+    <None Include="Resources\p-2.PNG" />
+    <None Include="Resources\p-1.PNG" />
+    <Content Include="Resources\writing.ico" />
+    <None Include="Resources\แบบฝึกหัดคัดไทย.pdf" />
+    <None Include="Resources\แบบฝึกหัดจับคู่คำและรูปภาพ.pdf" />
+    <None Include="Resources\แบบฝึกหัดแยกคำตามมาตรา.pdf" />
+    <None Include="Resources\แม่ ก กา.png" />
+    <None Include="Resources\ตัวสะกด.png" />
+    <None Include="Resources\เมือง.gif" />
+    <None Include="Resources\มาตรา ตัวสะกด.gif" />
+    <None Include="Resources\มาตรา ตัวสะกด1.gif" />
+    <None Include="Resources\มาตรา ตัวสะกด2.gif" />
+    <None Include="Resources\มาตรา ตัวสะกด3.gif" />
+    <Content Include="writing.ico" />
+    <None Include="Resources\a-1-removebg-preview.png" />
+    <None Include="Resources\a-2-removebg-preview.png" />
+    <None Include="Resources\a-1.PNG" />
+    <None Include="Resources\a-2.PNG" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="Fonts\Mali-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\Mali-SemiBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
